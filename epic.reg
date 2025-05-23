@@ -6,10 +6,160 @@ Windows Registry Editor Version 5.00
 "FolderType"="NotSpecified"
 
 
+; Disable Search Indexing
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WSearch]
+"Start"=dword:4
+
+
+; Disable Superfetch (Remove this section if you use a HDD)
+
+[HKLM\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:4
+
+; Disable Automatic Windows Updates
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUdpate"=dword:1
+
+; Display File extension and Hidden Files
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"HideFileExt"=dword:0
+"Hidden"=dword:1
+
+
+; Disable advertising id
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo]
+"DisabledByGroupPolicy"=dword:1
+
+
+; Disable Clipboard and Activity feed
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
+"AllowClipboardHistory"=dword:0
+"AllowCrossDeviceClipboard"=dword:0
+"EnableActivityFeed"=dword:0
+"PublishUserActivities"=dword:0
+"UploadUserActivities"=dword:0
+
+
+
 ; Disable XBox Game Bar
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\Windows.Gaming.GameBar.PresenceServer.Internal.PresenceWriter]
+"ActivationType"=dword:0
+
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR]
-"AppCaptureEnabled"=dword:00000000
+"AppCaptureEnabled"=dword:0
 
 [HKEY_CURRENT_USER\System\GameConfigStore]
-"GameDVR_Enabled"=dword:00000000
+"GameDVR_Enabled"=dword:0
+
+
+; Disable Background Apps
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy]
+"LetAppsRunInBackground"=dword:2
+
+
+; Disable Sticky Keys
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
+"Flags"="506"
+
+
+; Disable Mouse Acceleration
+
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
+
+
+; Disable Telemetry
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput]
+"AllowLinguisticDataCollection"=dword:0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:0
+"LimitDiagnosticLogCollection"=dword:1
+"LimitDumpCollection"=dword:1
+"LimitEnhancedDiagnosticDataWindowsAnalytics"=dword:0
+"DoNotShowFeedbackNotifications"=dword:1
+
+
+; Disable End of Support notification
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\EOSNotify]
+"DiscontinueEOS"=dword:1
+
+
+; Disable Windows Defender
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"DisableAntiSpyware"=dword:1
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Microsoft Antimalware\Real-Time Protection]
+"DisableScanOnRealtimeEnable"=dword:1
+"DisableOnAccessProtection"=dword:1
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection]
+"DisableScanOnRealtimeEnable"=dword:1
+"DisableBehaviorMonitoring"=dword:1
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MsSecCore]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wscsvc]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdBoot]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisSvc]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdNisDrv]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Sense]
+"Start"=dword:4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run]
+"SecurityHealth"=-
+"WindowsDefender"=-
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity]
+"Enabled"=dword:0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Spynet]
+"SpyNetReporting"=dword:0
+"SubmitSamplesConsent"=dword:0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
+"SmartScreenEnabled"=dword:0
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost]
+"EnableWebContentEvaluation"=dword:0
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Edge\SmartScreenEnabled]
+"@"=dword:0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WTDS\Components]
+"ServiceEnabled"=dword:0
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CI\Policy]
+"VerifiedAndReputablePolicyState"=dword:0
+
