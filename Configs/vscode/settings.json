@@ -1,0 +1,23 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.telemetryLevel": "off",
+    "telemetry.feedback.enabled": false,
+    "update.enableWindowsBackgroundUpdates": false,
+    "update.mode": "manual",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "chat.disableAIFeatures": true,
+    
+    "editor.tabSize": 3,
+    "editor.insertSpaces": false,
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.cursorBlinking": "phase"
+}
